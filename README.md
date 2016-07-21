@@ -2,3 +2,14 @@
 
 > This example creates an attribute that we can use to annotate classes we would like to register with Autofac.
 The test project then uses that attribute to register the classes.
+
+```
+[AutofacComponent]
+public class SomeServiceImpl : ISomeService {
+}
+
+...
+
+var service = ctx.Resolve<ISomeService>();
+...
+```
